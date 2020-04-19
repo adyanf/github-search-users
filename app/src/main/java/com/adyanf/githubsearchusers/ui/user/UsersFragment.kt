@@ -111,7 +111,7 @@ class UsersFragment : Fragment(), UsersContract.View, CoroutineScope {
     }
 
     private fun applyNewState(q: String = "") {
-        this.query = q
+        query = q
         totalItems = 0
         page = 1
     }
