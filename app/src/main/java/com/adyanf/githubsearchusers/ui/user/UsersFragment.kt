@@ -75,7 +75,8 @@ class UsersFragment : Fragment(), UsersContract.View, CoroutineScope {
                     if (newText.isNotBlank()) {
                         throttler.offer { presenter.retrieveUsers(newText, page) }
                     } else {
-                        throttler.cancel()
+                        // so that the previous value on channel will not invoked
+                        throttler.offer {}
                     }
                     return true
                 }
