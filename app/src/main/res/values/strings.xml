@@ -4,5 +4,6 @@
     <string name="user_login">userlogin</string>
     <string name="search_menu_item">Search menu item</string>
     <string name="empty_result">Hasil pencarian: <b>%1$s</b> tidak ditemukan.</string>
+    <string name="error_rate_limit_exceeded">Melebihi batas request. Tunggu beberapa saat lagi.</string>
     <string name="error_network">Terjadi kesalahan pada jaringan.</string>
 </resources>

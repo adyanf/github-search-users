@@ -24,4 +24,8 @@ class RemoteRepository : Repository {
     override fun retrieveUsers(query: String, page: Int, callback: Callback<GithubSearchResult<List<User>>>) {
         api.retrieveUsers(query, page).enqueue(callback)
     }
+
+    companion object {
+        const val RATE_LIMIT_EXCEEDED = "rate limit exceeded"
+    }
 }

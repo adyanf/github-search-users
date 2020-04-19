@@ -161,6 +161,10 @@ class UsersFragment : Fragment(), UsersContract.View, CoroutineScope {
     }
 
     override fun showError(message: String) {
-        Snackbar.make(main, message, Snackbar.LENGTH_LONG).show()
+        val error = when (message) {
+            RemoteRepository.RATE_LIMIT_EXCEEDED -> resources.getString(R.string.error_rate_limit_exceeded)
+            else -> message
+        }
+        Snackbar.make(main, error, Snackbar.LENGTH_LONG).show()
     }
 }
